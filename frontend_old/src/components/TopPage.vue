@@ -29,7 +29,7 @@ export default Vue.extend({
 
   data: function() {
     
-    //let url = `https://35.76.38.95:8000/tasks/get_tasks_count_for_user/?id=hironov120`;
+    //let url = `http://35.76.246.150/tasks/get_tasks_count_for_user/?id=hironov120`;
     //let result = await accessApi.getApi(url); // awaitを書いて、待たせる？
     
     
@@ -61,7 +61,7 @@ export default Vue.extend({
 
       console.log("execute initialize");
 
-      let url = `https://35.76.38.95:8000/tasks/get_tasks_count_for_user/?id=hironov120`;
+      let url = `http://35.76.246.150/tasks/get_tasks_count_for_user/?id=hironov120`;
       let result = await accessApi.getApi(url); // awaitを書いて、待たせる？
       
       this.series[0].data = result.data.priority_1_count;
@@ -71,7 +71,7 @@ export default Vue.extend({
       this.showGraph = false;
       this.$nextTick(() => (this.showGraph = true));
       
-      url = `https://35.76.38.95:8000/tasks/get_tasks_for_user/?id=hironov120&sort_state=${this.sortState}&display_state=${Vue.prototype.$displayState}`;
+      url = `http://35.76.246.150/tasks/get_tasks_for_user/?id=hironov120&sort_state=${this.sortState}&display_state=${Vue.prototype.$displayState}`;
       result = await accessApi.getApi(url); // awaitを書いて、待たせる？
       Vue.prototype.$dueTodayCount = result.data.due_today_count;
       

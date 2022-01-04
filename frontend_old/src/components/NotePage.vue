@@ -139,7 +139,7 @@ export default Vue.extend({
             console.log("execute initialize")
             this.loading = true;
             
-            let url = `https://35.76.38.95:8000/notes/get_notes_for_user/?id=hironov120`
+            let url = `http://35.76.246.150/notes/get_notes_for_user/?id=hironov120`
             let result = await accessApi.getApi(url) // awaitを書いて、待たせる？
             this.notes = result.data
 
@@ -154,7 +154,7 @@ export default Vue.extend({
 
         save: async function() {
 
-            let url = 'https://35.76.38.95:8000/notes/'; // postメソッドの中に書かない 外で定義したら動いた あと:つける！
+            let url = 'http://35.76.246.150/notes/'; // postメソッドの中に書かない 外で定義したら動いた あと:つける！
 
             if (this.editedIndex > -1) { // 更新の場合
                 
@@ -181,7 +181,7 @@ export default Vue.extend({
         
         executeComplete: async function() {
 
-            let url = 'https://35.76.38.95:8000/notes/' + this.editedIndex + '/';
+            let url = 'http://35.76.246.150/notes/' + this.editedIndex + '/';
             await accessApi.deleteApi(url)
 
             this.closeComplete();

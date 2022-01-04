@@ -259,7 +259,7 @@ export default Vue.extend({
             console.log("execute initialize")
             this.loading = true;
 
-            let url = `https://35.76.38.95:8000/tasks/get_tasks_for_user/?id=hironov120&sort_state=${this.sortState}&display_state=${Vue.prototype.$displayState}`
+            let url = `http://35.76.246.150/tasks/get_tasks_for_user/?id=hironov120&sort_state=${this.sortState}&display_state=${Vue.prototype.$displayState}`
             let result = await accessApi.getApi(url); // awaitを書いて、待たせる？
             this.tasks = result.data.tasks;
             Vue.prototype.$dueTodayCount = result.data.due_today_count;
@@ -276,7 +276,7 @@ export default Vue.extend({
         save: async function () {
             this.loading = true;
 
-            let url = 'https://35.76.38.95:8000/tasks/'; // postメソッドの中に書かない 外で定義したら動いた あと:つける！
+            let url = 'http://35.76.246.150/tasks/'; // postメソッドの中に書かない 外で定義したら動いた あと:つける！
 
             if ((this.editTask.deadline === null ) || (this.editTask.deadline === '' )) {
                 this.editTask.deadline = "2099-12-31";
@@ -333,7 +333,7 @@ export default Vue.extend({
         executeComplete: async function() {
             this.loading = true;
 
-            let url = 'https://35.76.38.95:8000/tasks/' + this.editedIndex + '/';
+            let url = 'http://35.76.246.150/tasks/' + this.editedIndex + '/';
             await accessApi.deleteApi(url)
 
             this.closeComplete();
