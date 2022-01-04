@@ -25,11 +25,12 @@ SECRET_KEY = 'django-insecure-frnilx7zft3smcq(&*67cw+zmek3p6dqcfr07p6r*-^#(3@bhj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['35.76.246.150']
 
 CORS_ORIGIN_WHITELIST = [
-    'http://dev-utils-app.s3-website-ap-northeast-1.amazonaws.com',
-    'http://35.76.38.95:8080',
+    'http://dev-utils-app.s3-website-ap-northeast-1.amazonaws.com', 
+    'http://35.76.246.150',
+    'https://35.76.246.150',
 ]
 
 
@@ -94,6 +95,20 @@ DATABASES = {
 }
 
 
+# 本番用
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'mysql', # 
+#         'USER': 'hironov120',
+#         'PASSWORD': '********',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -130,7 +145,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+import os
+
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
