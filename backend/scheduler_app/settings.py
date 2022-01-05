@@ -25,12 +25,11 @@ SECRET_KEY = 'django-insecure-frnilx7zft3smcq(&*67cw+zmek3p6dqcfr07p6r*-^#(3@bhj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['35.76.246.150']
+ALLOWED_HOSTS = ['*']
 
 CORS_ORIGIN_WHITELIST = [
     'http://dev-utils-app.s3-website-ap-northeast-1.amazonaws.com', 
-    'http://35.76.246.150',
-    'https://35.76.246.150',
+    'https://8b431118dbfc42038e092c4225a4c6c8.vfs.cloud9.ap-northeast-1.amazonaws.com'
 ]
 
 

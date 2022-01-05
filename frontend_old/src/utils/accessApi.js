@@ -1,11 +1,16 @@
 import axios from 'axios';
 
+// バックエンドのURL
+// const domain = 'http://35.76.246.150';
+const domain = 'http://localhost:8080';
+
+
 const accessApi = {
 
     getApi: async function(url) {
         const startTime = Date.now();
         const result = { "data": {}, "status": '' };
-        await axios.get(url)
+        await axios.get(domain + url)
             .then(response => { //then(response) (=>) {} で、{}の中でresponseを使える！
                 console.log('status:', response.status); // 200
                 console.log('body:', response.data);     // response body.
@@ -25,7 +30,7 @@ const accessApi = {
     postApi: async function(url, postData) {
         const startTime = Date.now();
         await axios
-            .post(url, postData, { headers: { 'content-type': 'application/json' } })
+            .post(domain + url, postData, { headers: { 'content-type': 'application/json' } })
             .then(response => {
                 console.log(response.data);
             }).catch( err => {
@@ -41,7 +46,7 @@ const accessApi = {
     putApi: async function(url, putData) {
         const startTime = Date.now();
         await axios
-            .put(url, putData, { headers: { 'content-type': 'application/json' } })
+            .put(domain + url, putData, { headers: { 'content-type': 'application/json' } })
             .then(response => {
                 console.log(response.data);
             }).catch(err => {
@@ -57,7 +62,7 @@ const accessApi = {
     deleteApi: async function(url) {
         const startTime = Date.now();
         await axios
-            .delete(url)
+            .delete(domain + url)
             .then(response => {
                 console.log(response.data);
             }).catch( err => {
