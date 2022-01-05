@@ -15,9 +15,9 @@
           <v-list-item link to="/">
             <v-list-item-content>
               <v-list-item-title class="text-h6">
-                Hiroki Nakamura
+                John Doe
               </v-list-item-title>
-              <v-list-item-subtitle>johndoe@dummy.co.jp</v-list-item-subtitle>
+              <v-list-item-subtitle>johndoe@yuck.co.jp</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
         </v-list>
