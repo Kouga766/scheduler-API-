@@ -33,7 +33,8 @@
               <v-text-field prepend-icon="mdi-account-circle" label="ユーザ名" />
               <v-text-field prepend-icon="mdi-lock" append-icon="mdi-eye-off" label="パスワード" />
               <v-card-actions class="justify-center">
-                <v-btn class="info">ログイン</v-btn>
+                <v-btn class="info" flat to="/main">ログイン</v-btn>
+
               </v-card-actions>
             </v-form>
           </v-card-text>
@@ -53,7 +54,7 @@
               <v-text-field prepend-icon="mdi-lock" append-icon="mdi-eye-off" label="パスワード" />
               <v-text-field prepend-icon="mdi-lock" append-icon="mdi-eye-off" label="パスワード（再）" />
               <v-card-actions class="justify-center">
-                <v-btn class="info">ログイン</v-btn>
+                <v-btn class="info"  flat to="/main">登録</v-btn>
               </v-card-actions>
             </v-form>
           </v-card-text>
