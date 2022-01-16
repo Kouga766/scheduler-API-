@@ -38,7 +38,7 @@
     </v-app-bar>
 
     <v-main>
-      <login/>
+      <HelloWorld/>
     </v-main>
   </v-app>
 </template>
