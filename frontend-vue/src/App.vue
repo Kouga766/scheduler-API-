@@ -1,7 +1,15 @@
 <template>
   <v-app>
   <v-card width="400px" class="mx-auto mt-5">
-   <v-tabs>
+    <v-img
+                :src="require('./assets/favicon.png')"
+                class="my-3"
+                contain
+                height="200"
+    />
+   <v-tabs fixed-tabs
+      background-color="#cd853f"
+      dark>
      <v-tab>
           <v-icon left>
             mdi-login
@@ -16,12 +24,7 @@
         </v-tab>
       <v-tab-item>
 
-          <v-img
-                :src="require('./assets/favicon.png')"
-                class="my-3"
-                contain
-                height="200"
-          />
+
           <v-card-title>
             <h1 class="display-1">ログイン</h1>
           </v-card-title>
@@ -39,12 +42,7 @@
 
       <v-tab-item>
 
-          <v-img
-                :src="require('./assets/favicon.png')"
-                class="my-3"
-                contain
-                height="200"
-          />
+
           <v-card-title>
             <h1 class="display-1">新規登録</h1>
           </v-card-title>
