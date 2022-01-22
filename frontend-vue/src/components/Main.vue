@@ -221,7 +221,6 @@
         max-height="200"
         max-width="500"
         color="#98fb98">
-テスト
         <v-list-item
             v-for="item in items"
             :key="item.message">
