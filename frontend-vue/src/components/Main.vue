@@ -2,7 +2,7 @@
   <v-app>
     <v-container>
     <v-row>
-    <v-col cols="9">
+    <v-col cols="8">
     <v-card>
       <v-data-table
           :headers="headers"
