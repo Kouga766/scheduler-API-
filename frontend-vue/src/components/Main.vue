@@ -202,7 +202,7 @@
    </v-card>
    </v-col>
 
-<!-- task件数表示（チャット型）-->
+
    <v-col cols="3"  height="100%">
    <v-card style="text-align:center" >
      <div>
