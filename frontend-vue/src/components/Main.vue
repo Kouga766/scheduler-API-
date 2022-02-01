@@ -207,7 +207,7 @@
    <v-card style="text-align:center" >
      <div>
        <h2>
-         お疲れ様です(name)さん
+         お疲れ様です(@name)さん
        </h2>
        <h2>
          あなたの本日のタスクは（）件です。
