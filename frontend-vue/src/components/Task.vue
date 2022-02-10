@@ -430,7 +430,7 @@ export default Vue.extend({
 
         editItem (item) {
             console.log(item)
-            this.editedIndex = item.id; //保存用のパラメータをもつ
+            this.editedIndex = item.id; // 保存用のパラメータをもつ
             this.editTask = Object.assign({}, item);
             if (this.editTask.deadline === "2099-12-31") {
                 this.editTask.deadline = null;
