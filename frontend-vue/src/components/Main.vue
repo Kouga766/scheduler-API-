@@ -200,14 +200,14 @@
 
       </v-data-table>
    </v-card>
-   </v-col>
 
+   </v-col>
 
    <v-col cols="3"  height="100%">
    <v-card style="text-align:center" >
      <div>
        <h2>
-         お疲れ様です(@name)さん
+         お疲れ様です(name)さん
        </h2>
        <h2>
          あなたの本日のタスクは（）件です。
