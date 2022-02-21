@@ -242,6 +242,7 @@
  </v-app>
 </template>
 
+
 <script>
 import Vue from 'vue';
 import accessApi from '../utils/accessApi.js'
